@@ -9,7 +9,7 @@
 		<meta name="author" content="pixelstrap">
 		<link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
 		<link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
-		<title>Kedaireka Mall @yield('title')</title>
+		<title>Kedaireka Mall &#x2022; @yield('title')</title>
 		@include('layouts.errors.css')
 		@yield('style')
 	</head>
