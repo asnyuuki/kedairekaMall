@@ -1,5 +1,5 @@
 @extends('layouts.authentication.master')
-@section('title', 'Login-bs-validation')
+@section('title', 'Login')
 
 @section('css')
 @endsection
