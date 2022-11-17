@@ -6,10 +6,23 @@ use Illuminate\Support\Facades\Session;
 Route::get('/', function () {
     return redirect()->route('index');
 })->name('/');
+
+//Language Change
+Route::get('lang/{locale}', function ($locale) {
+    if (! in_array($locale, ['en', 'id'])) {
+        abort(400);
+    }   
+    Session()->put('locale', $locale);
+    Session::get('locale');
+    return redirect()->back();
+})->name('lang');
+
+//dashboard
 Route::prefix('dashboard')->group(function () {
     Route::view('index', 'dashboard.index')->name('index');
-    Route::view('dashboard-02', 'dashboard.dashboard-02')->name('dashboard-02');
+    Route::view('dashboard', 'dashboard.dashboard')->name('dashboard');
 });
+
 Route::view('comingsoon', 'comingsoon.comingsoon')->name('comingsoon');
 // Route::view('landingpage', 'pages.landingpage')->name('landingpage');
 
