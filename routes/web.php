@@ -11,7 +11,7 @@ Route::prefix('dashboard')->group(function () {
     Route::view('dashboard-02', 'dashboard.dashboard-02')->name('dashboard-02');
 });
 Route::view('comingsoon', 'comingsoon.comingsoon')->name('comingsoon');
-Route::view('landingpage', 'pages.landingpage')->name('landingpage');
+// Route::view('landingpage', 'pages.landingpage')->name('landingpage');
 
 Route::prefix('authentication')->group(function () {
     Route::view('login', 'authentication.login')->name('login');
