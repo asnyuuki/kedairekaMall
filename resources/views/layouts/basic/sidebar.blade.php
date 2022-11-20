@@ -15,12 +15,11 @@
             <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
           </li>
           <li class="sidebar-list">
-            <a class="sidebar-link sidebar-title {{request()->route()->getPrefix() == '/dashboard' ? 'active' : '' }}" href="#"><i data-feather="home"></i><span>Dashboard</span>
+            <a class="sidebar-link sidebar-title {{ Route::currentRouteName()=='dashboard' ? 'active' : '' }}" href="{{route('dashboard')}}"><i data-feather="home"></i><span>Dashboard</span>
             </a>
           </li>
           <li class="sidebar-list">
               <a class="sidebar-link sidebar-title" href="#"><label class="badge badge-secondary">off</label><i data-feather="users"></i><span>Users</span>
-                <div class="according-menu"><i class="fa fa-angle-{{request()->route()->getPrefix() == '/widgets' ? 'down' : 'right' }}"></i></div>
               </a>
           </li>
           <li class="sidebar-list">
@@ -44,7 +43,7 @@
               </a>
           </li>
           <li class="sidebar-list">
-              <a class="sidebar-link sidebar-title" href="#"><label class="badge badge-secondary">off</label><i data-feather="shopping-bag"></i><span>Ecommerce</span>
+              <a class="sidebar-link sidebar-title {{ Route::currentRouteName()=='ecommerce-graph-report' ? 'active' : '' }}" href="{{route('ecommerce-graph-report')}}"><i data-feather="shopping-bag"></i><span>Ecommerce</span>
               </a>
           </li>
           <li class="sidebar-list">
@@ -55,7 +54,10 @@
               <a class="sidebar-link sidebar-title" href="#"><label class="badge badge-secondary">off</label><i data-feather="info"></i><span>About</span>
               </a>
           </li>
-          <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='faq' ? 'active' : '' }}" href="{{route('faq')}}"><label class="badge badge-secondary">off</label><i data-feather="help-circle"> </i><span>FAQ</span></a></li>
+          <li class="sidebar-list">
+            <a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='faq' ? 'active' : '' }}" href="{{route('faq')}}"><label class="badge badge-secondary">off</label><i data-feather="help-circle"> </i><span>FAQ</span>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
