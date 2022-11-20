@@ -1,5 +1,5 @@
 @extends('layouts.comingsoon.master')
-@section('title', 'Comingsoon')
+@section('title', 'Coming Soon')
 
 @section('css')
 @endsection
