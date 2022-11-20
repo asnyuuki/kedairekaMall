@@ -1,41 +1,27 @@
 <div class="page-header">
   <div class="header-wrapper row m-0">
-    <form class="form-inline search-full col" action="#" method="get">
-      <div class="mb-3 w-100">
-        <div class="Typeahead Typeahead--twitterUsers">
-          <div class="u-posRelative">
-            <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text" placeholder="Tungguin ya ... " name="q" title="" autofocus>
-            <div class="spinner-border Typeahead-spinner" role="status"><span class="sr-only">Loading...</span></div>
-            <i class="close-search" data-feather="x"></i>
-          </div>
-          <div class="Typeahead-menu"></div>
-        </div>
-      </div>
-    </form>
     <div class="header-logo-wrapper col-auto p-0">
-      <div class="logo-wrapper"><a href="{{route('/')}}"><img class="img-fluid" src="{{asset('assets/images/logo/logo.png')}}" alt=""></a></div>
-      <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i></div>
+      <div class="logo-wrapper"><a href="{{route('/')}}"><img class="img-fluid" src="{{asset('assets/images/logo/logo.png')}}" alt=""></a></div> 
     </div>
-    <div class="nav-right col-8 pull-right right-header p-0">
-      <ul class="nav-menus">
-        <li class="language-nav">
-          <div class="translate_wrapper">
-            <div class="current_lang">
-              <div class="lang"><i class="flag-icon flag-icon-{{ (App::getLocale() == 'en') ? 'us' : App::getLocale() }}"></i><span class="lang-txt">{{ App::getLocale() }} </span></div>
+    <div class="nav-right col pull-right right-header p-0">
+      <form class="form-inline search-full col" action="#" method="get">
+        <div class="mb-3 w-50">
+          <div class="Typeahead Typeahead--twitterUsers">
+            <div class="u-posRelative">
+              <input class="demo-input Typeahead-input form-control-plaintext w-50" type="text" placeholder="Cari di Kedaireka Mall" name="q" title="" autofocus>
+              <div class="spinner-border Typeahead-spinner" role="status"><span class="sr-only">Loading...</span></div>
+              <i class="close-search" data-feather="x"></i>
             </div>
-            <div class="more_lang">
-              <a href="{{ route('lang', 'en' )}}" class="{{ (App::getLocale()  == 'en') ? 'active' : ''}}">
-                <div class="lang {{ (App::getLocale()  == 'en') ? 'selected' : ''}}" data-value="en"><i class="flag-icon flag-icon-us"></i> <span class="lang-txt">English</span><span> (US)</span></div>
-              </a>
-               <a href="{{ route('lang', 'id' )}}" class="{{ (App::getLocale()  == 'id') ? 'active' : ''}}">
-                <div class="lang {{ (App::getLocale()  == 'id') ? 'selected' : ''}}" data-value="id"><i class="flag-icon flag-icon-id"></i> <span class="lang-txt">Indonesia</span></div>
-              </a>
-            </div>
+            <div class="Typeahead-menu"></div>
           </div>
-        </li>
-        <li><span class="header-search"><i data-feather="search"></i></span></li>
+        </div>
+      </form>
+      <ul class="nav-menus">
+        <li><label class="badge badge-secondary">off</label><span class="header-search"><i data-feather="search"></i></span></li>
         <li class="onhover-dropdown">
-          <div class="notification-box"><i data-feather="bell"> </i><span class="badge rounded-pill badge-secondary">4</span></div>
+          <div class="notification-box"><i data-feather="bell"></i><label class="badge badge-secondary">off</label>
+            {{-- <span class="badge rounded-pill badge-secondary">4</span> --}}
+          </div>
           <ul class="notification-dropdown onhover-show-div">
             <li>
               <i data-feather="bell"></i>
@@ -60,7 +46,7 @@
           <div class="mode"><i class="fa fa-moon-o"></i></div>
         </li>
         <li class="onhover-dropdown">
-          <i data-feather="message-square"></i>
+          <label class="badge badge-secondary">off</label><i data-feather="message-square"></i>
           <ul class="chat-dropdown onhover-show-div">
             <li>
               <i data-feather="message-square"></i>
@@ -102,7 +88,6 @@
             <li class="text-center"> <a class="btn btn-primary" href="#">View All     </a></li>
           </ul>
         </li>
-        <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
         <li class="profile-nav onhover-dropdown p-0 me-0">
           <div class="media profile-media">
             <img class="b-r-10" src="{{asset('assets/images/dashboard/profile.jpg')}}" alt="">
