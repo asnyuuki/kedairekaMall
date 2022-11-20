@@ -3,13 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect()->route('index');
+    return redirect()->route('dashboard');
 })->name('/');
 
 //dashboard
-Route::prefix('dashboard')->group(function () {
-    Route::view('index', 'dashboard.index')->name('index');
-    Route::view('dashboard', 'dashboard.dashboard')->name('dashboard');
+Route::prefix('administrator')->group(function () {
+    Route::view('dashboard', 'administrator.dashboard')->name('dashboard');
+    Route::view('ecommerce-graph-report', 'administrator.ecommerce-graph-report')->name('ecommerce-graph-report');
 });
 
 Route::view('comingsoon', 'comingsoon.comingsoon')->name('comingsoon');
