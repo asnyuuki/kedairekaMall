@@ -3,7 +3,7 @@
     <div class="header-logo-wrapper col-auto p-0">
       <div class="logo-wrapper"><a href="{{route('/')}}"><img class="img-fluid" src="{{asset('assets/images/logo/logo.png')}}" alt=""></a></div> 
     </div>
-    <div class="nav-right col pull-right right-header p-0">
+    <div class="nav-right col pull-right right-header p-0"> 
       <form class="form-inline search-full col" action="#" method="get">
         <div class="mb-3 w-50">
           <div class="Typeahead Typeahead--twitterUsers">

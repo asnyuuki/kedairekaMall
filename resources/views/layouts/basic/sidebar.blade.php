@@ -15,7 +15,7 @@
             <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
           </li>
           <li class="sidebar-list">
-            <a class="sidebar-link sidebar-title {{ Route::currentRouteName()=='dashboard' ? 'active' : '' }}" href="{{route('dashboard')}}"><i data-feather="home"></i><span>Dashboard</span>
+            <a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='dashboard' ? 'active' : '' }}" href="{{route('dashboard')}}"><label class="badge badge-success">wanna edit</label><i data-feather="home"></i><span>Dashboard</span>
             </a>
           </li>
           <li class="sidebar-list">
@@ -27,10 +27,6 @@
               </a>
           </li>
           <li class="sidebar-list">
-              <a class="sidebar-link sidebar-title" href="#"><label class="badge badge-secondary">off</label><i data-feather="paperclip"></i><span>Report</span>
-              </a>
-          </li>
-          <li class="sidebar-list">
               <a class="sidebar-link sidebar-title" href="#"><label class="badge badge-secondary">off</label><i data-feather="clock"></i><span>Timeline</span>
               </a>
           </li>
@@ -39,11 +35,15 @@
               </a>
           </li>
           <li class="sidebar-list">
-              <a class="sidebar-link sidebar-title" href="#"><label class="badge badge-secondary">off</label><i data-feather="at-sign"></i><span>Seller</span>
+              <a class="sidebar-link sidebar-title" href="#"><label class="badge badge-secondary">off</label><i data-feather="paperclip"></i><span>Report</span>
               </a>
           </li>
           <li class="sidebar-list">
-              <a class="sidebar-link sidebar-title {{ Route::currentRouteName()=='ecommerce-graph-report' ? 'active' : '' }}" href="{{route('ecommerce-graph-report')}}"><i data-feather="shopping-bag"></i><span>Ecommerce</span>
+              <a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='seller' ? 'active' : '' }}" href="{{route('seller')}}"><label class="badge badge-success">wanna edit</label><i data-feather="at-sign"></i><span>Seller</span>
+              </a>
+          </li>
+          <li class="sidebar-list">
+              <a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='ecommerce-graph-report' ? 'active' : '' }}" href="{{route('ecommerce-graph-report')}}"><label class="badge badge-success">wanna edit</label><i data-feather="shopping-bag"></i><span>Ecommerce</span>
               </a>
           </li>
           <li class="sidebar-list">
@@ -51,11 +51,7 @@
               </a>
           </li>
           <li class="sidebar-list">
-              <a class="sidebar-link sidebar-title" href="#"><label class="badge badge-secondary">off</label><i data-feather="info"></i><span>About</span>
-              </a>
-          </li>
-          <li class="sidebar-list">
-            <a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='faq' ? 'active' : '' }}" href="{{route('faq')}}"><label class="badge badge-secondary">off</label><i data-feather="help-circle"> </i><span>FAQ</span>
+            <a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='faq' ? 'active' : '' }}" href="{{route('faq')}}"><i data-feather="help-circle"></i><span>FAQ</span>
             </a>
           </li>
         </ul>

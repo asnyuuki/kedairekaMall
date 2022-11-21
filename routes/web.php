@@ -13,7 +13,10 @@ Route::prefix('administrator')->group(function () {
 });
 
 Route::view('comingsoon', 'comingsoon.comingsoon')->name('comingsoon');
-Route::view('faq', 'apps.faq')->name('faq');
+Route::prefix('apps')->group(function () {
+    Route::view('faq', 'apps.faq')->name('faq');
+    Route::view('seller', 'apps.seller')->name('seller');
+});
 
 Route::prefix('others')->group(function () {
     Route::view('400', 'errors.400')->name('error-400');
