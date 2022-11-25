@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect()->route('dashboard');
+    return redirect()->route('landingpage');
 })->name('/');
+
+Route::view('landingpage', 'pages.landingpage')->name('landingpage');
 
 //dashboard
 Route::prefix('administrator')->group(function () {
