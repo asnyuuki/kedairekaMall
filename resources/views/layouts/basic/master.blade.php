@@ -62,7 +62,6 @@
         </div>
         <!-- footer start-->
         @include('layouts.basic.footer') 
-        
       </div>
     </div>
     <!-- latest jquery-->
